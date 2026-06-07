@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Araujo Contabilidade – Contabilidade inteligente para MEIs e empresas do Simples Nacional. Atendimento personalizado, valores acessíveis e suporte especializado. CRC MG-135873/O." />
+  <meta name="keywords" content="contabilidade, MEI, Simples Nacional, abertura de empresa, imposto de renda, planejamento tributário, Minas Gerais" />
+  <meta name="author" content="Araujo Contabilidade" />
+  <meta property="og:title" content="Araujo Contabilidade – Contabilidade para MEIs e Simples Nacional" />
+  <meta property="og:description" content="Reduza preocupações com burocracia e tenha uma contabilidade eficiente, acessível e focada no crescimento do seu negócio." />
+  <meta property="og:type" content="website" />
+  <title>Araujo Contabilidade – CRC MG-135873/O</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:   #0F172A;
+      --blue:   #2563EB;
+      --blue2:  #1D4ED8;
+      --sky:    #3B82F6;
+      --white:  #FFFFFF;
+      --gray:   #F8FAFC;
+      --gray2:  #E2E8F0;
+      --gray3:  #94A3B8;
+      --text:   #1E293B;
+      --text2:  #475569;
+      --radius: 16px;
+      --shadow: 0 4px 32px rgba(15,23,42,.10);
+      --shadow2: 0 2px 12px rgba(37,99,235,.18);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--white);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    /* ─── NAVBAR ─── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 999;
+      background: rgba(15,23,42,.96);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255,255,255,.07);
+      padding: 0 clamp(20px,5vw,80px);
+      height: 68px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px;
+      text-decoration: none;
+    }
+    .nav-logo-icon {
+      width: 38px; height: 38px; border-radius: 10px;
+      background: linear-gradient(135deg, var(--blue), #1e40af);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px; color: #fff; font-weight: 800;
+      font-family: 'Playfair Display', serif;
+      box-shadow: 0 0 0 2px rgba(37,99,235,.4);
+    }
+    .nav-brand-text { color: #fff; font-weight: 600; font-size: 1rem; letter-spacing: .01em; }
+    .nav-brand-crc { color: var(--gray3); font-size: .72rem; display: block; letter-spacing: .04em; }
+    .nav-links { display: flex; align-items: center; gap: 28px; }
+    .nav-links a { color: rgba(255,255,255,.75); text-decoration: none; font-size: .9rem; font-weight: 500; transition: color .2s; }
+    .nav-links a:hover { color: #fff; }
+    .nav-cta {
+      background: var(--blue); color: #fff; padding: 9px 22px;
+      border-radius: 8px; font-size: .88rem; font-weight: 600;
+      text-decoration: none; transition: background .2s, transform .15s;
+      white-space: nowrap;
+    }
+    .nav-cta:hover { background: var(--blue2); transform: translateY(-1px); }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: #fff; border-radius: 2px; transition: .3s; }
+    .mobile-menu {
+      display: none; position: fixed; top: 68px; left: 0; right: 0; z-index: 998;
+      background: var(--navy); padding: 20px 24px 28px;
+      flex-direction: column; gap: 18px;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { color: rgba(255,255,255,.85); text-decoration: none; font-size: 1rem; font-weight: 500; }
+    .mobile-menu .nav-cta { text-align: center; padding: 12px; border-radius: 10px; }
+
+    /* ─── HERO ─── */
+    #hero {
+      min-height: 100vh;
+      background: var(--navy);
+      display: flex; align-items: center;
+      position: relative; overflow: hidden;
+      padding: 100px clamp(20px,5vw,80px) 60px;
+    }
+    .hero-bg {
+      position: absolute; inset: 0; pointer-events: none;
+    }
+    .hero-bg-circle {
+      position: absolute; border-radius: 50%;
+      background: radial-gradient(circle, rgba(37,99,235,.22) 0%, transparent 70%);
+    }
+    .hero-bg-circle.c1 { width: 700px; height: 700px; top: -200px; right: -150px; }
+    .hero-bg-circle.c2 { width: 500px; height: 500px; bottom: -180px; left: -100px; background: radial-gradient(circle, rgba(59,130,246,.12) 0%, transparent 70%); }
+    .hero-grid-lines {
+      position: absolute; inset: 0;
+      background-image: linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+    .hero-inner {
+      position: relative; max-width: 760px;
+      animation: fadeUp .9s ease both;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(37,99,235,.18); border: 1px solid rgba(37,99,235,.4);
+      color: #93c5fd; padding: 7px 16px; border-radius: 100px;
+      font-size: .8rem; font-weight: 600; letter-spacing: .06em;
+      text-transform: uppercase; margin-bottom: 28px;
+    }
+    .hero-badge-dot { width: 7px; height: 7px; border-radius: 50%; background: #60a5fa; animation: pulse 2s infinite; }
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.2rem, 5vw, 3.6rem);
+      color: #fff; line-height: 1.18; margin-bottom: 22px;
+      font-weight: 800;
+    }
+    .hero-title span { color: #60a5fa; }
+    .hero-sub {
+      font-size: clamp(.95rem, 2vw, 1.13rem);
+      color: rgba(255,255,255,.65); line-height: 1.75;
+      max-width: 620px; margin-bottom: 40px;
+    }
+    .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--blue); color: #fff;
+      padding: 14px 32px; border-radius: 10px;
+      font-size: 1rem; font-weight: 600; text-decoration: none;
+      transition: all .2s; box-shadow: 0 4px 24px rgba(37,99,235,.4);
+    }
+    .btn-primary:hover { background: var(--blue2); transform: translateY(-2px); box-shadow: 0 8px 32px rgba(37,99,235,.5); }
+    .btn-outline {
+      display: inline-flex; align-items: center; gap: 8px;
+      border: 1.5px solid rgba(255,255,255,.25); color: #fff;
+      padding: 14px 28px; border-radius: 10px;
+      font-size: 1rem; font-weight: 500; text-decoration: none;
+      transition: all .2s;
+    }
+    .btn-outline:hover { background: rgba(255,255,255,.07); border-color: rgba(255,255,255,.5); transform: translateY(-2px); }
+    .hero-stats {
+      display: flex; gap: clamp(24px,4vw,48px);
+      margin-top: 56px; padding-top: 40px;
+      border-top: 1px solid rgba(255,255,255,.1);
+      flex-wrap: wrap;
+    }
+    .hero-stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem; color: #fff; font-weight: 800; line-height: 1;
+    }
+    .hero-stat-num span { color: #60a5fa; }
+    .hero-stat-label { color: rgba(255,255,255,.5); font-size: .82rem; margin-top: 4px; letter-spacing: .03em; }
+
+    /* ─── SECTIONS COMMON ─── */
+    section { padding: clamp(56px,8vw,100px) clamp(20px,5vw,80px); }
+    .section-eyebrow {
+      display: inline-block;
+      color: var(--blue); font-size: .78rem; font-weight: 700;
+      letter-spacing: .14em; text-transform: uppercase; margin-bottom: 12px;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.7rem, 3.5vw, 2.6rem);
+      color: var(--navy); font-weight: 800; line-height: 1.2; margin-bottom: 14px;
+    }
+    .section-sub { color: var(--text2); font-size: 1.05rem; line-height: 1.7; max-width: 580px; }
+    .center { text-align: center; }
+    .center .section-sub { margin: 0 auto; }
+
+    /* ─── SOBRE ─── */
+    #sobre { background: var(--gray); }
+    .sobre-inner {
+      max-width: 1100px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;
+    }
+    .sobre-visual {
+      position: relative;
+    }
+    .sobre-card {
+      background: var(--navy); border-radius: var(--radius);
+      padding: 40px 36px; color: #fff;
+      box-shadow: var(--shadow);
+    }
+    .sobre-card-icon { font-size: 2.6rem; margin-bottom: 18px; }
+    .sobre-card-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem; font-weight: 800; margin-bottom: 12px;
+    }
+    .sobre-card-text { color: rgba(255,255,255,.65); line-height: 1.7; font-size: .95rem; }
+    .sobre-badge {
+      position: absolute; bottom: -16px; right: -16px;
+      background: var(--blue); color: #fff;
+      padding: 14px 20px; border-radius: 14px;
+      font-weight: 700; font-size: .85rem; text-align: center;
+      box-shadow: var(--shadow2);
+    }
+    .sobre-badge span { display: block; font-size: 1.4rem; font-family: 'Playfair Display', serif; }
+    .sobre-content {}
+    .sobre-list { list-style: none; margin-top: 28px; display: flex; flex-direction: column; gap: 14px; }
+    .sobre-list li {
+      display: flex; align-items: flex-start; gap: 12px;
+      font-size: .96rem; color: var(--text2); line-height: 1.55;
+    }
+    .sobre-list li::before {
+      content: '✓';
+      display: flex; align-items: center; justify-content: center;
+      min-width: 22px; height: 22px;
+      background: rgba(37,99,235,.1); color: var(--blue);
+      border-radius: 6px; font-size: .8rem; font-weight: 700; margin-top: 1px;
+    }
+
+    /* ─── SERVIÇOS ─── */
+    #servicos { background: #fff; }
+    .servicos-grid {
+      max-width: 1100px; margin: 50px auto 0;
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px;
+    }
+    .servico-card {
+      background: var(--gray); border: 1px solid var(--gray2);
+      border-radius: var(--radius); padding: 30px 24px;
+      transition: all .3s; cursor: default;
+      position: relative; overflow: hidden;
+    }
+    .servico-card::before {
+      content: ''; position: absolute;
+      top: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, var(--blue), var(--sky));
+      transform: scaleX(0); transform-origin: left;
+      transition: transform .3s;
+    }
+    .servico-card:hover { transform: translateY(-6px); box-shadow: var(--shadow); border-color: transparent; background: #fff; }
+    .servico-card:hover::before { transform: scaleX(1); }
+    .servico-icon {
+      width: 52px; height: 52px; border-radius: 14px;
+      background: rgba(37,99,235,.1); display: flex; align-items: center;
+      justify-content: center; font-size: 1.4rem; margin-bottom: 16px;
+      transition: background .3s;
+    }
+    .servico-card:hover .servico-icon { background: rgba(37,99,235,.18); }
+    .servico-name {
+      font-weight: 600; font-size: .95rem; color: var(--text); line-height: 1.35;
+    }
+    .servico-desc { font-size: .83rem; color: var(--text2); margin-top: 6px; line-height: 1.55; }
+
+    /* ─── DIFERENCIAIS ─── */
+    #diferenciais { background: var(--navy); }
+    #diferenciais .section-title { color: #fff; }
+    #diferenciais .section-sub { color: rgba(255,255,255,.55); }
+    .dif-grid {
+      max-width: 1100px; margin: 50px auto 0;
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 22px;
+    }
+    .dif-card {
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: var(--radius); padding: 32px 28px;
+      transition: all .3s;
+    }
+    .dif-card:hover { background: rgba(37,99,235,.15); border-color: rgba(37,99,235,.4); transform: translateY(-4px); }
+    .dif-icon { font-size: 2rem; margin-bottom: 16px; }
+    .dif-title { color: #fff; font-weight: 700; font-size: 1rem; margin-bottom: 8px; }
+    .dif-text { color: rgba(255,255,255,.55); font-size: .88rem; line-height: 1.6; }
+
+    /* ─── COMO FUNCIONA ─── */
+    #como-funciona { background: var(--gray); }
+    .steps-wrapper {
+      max-width: 900px; margin: 52px auto 0;
+      display: flex; flex-direction: column; gap: 0;
+    }
+    .step {
+      display: flex; gap: 28px; align-items: flex-start;
+      animation: fadeUp .6s ease both;
+    }
+    .step:nth-child(1) { animation-delay: .1s; }
+    .step:nth-child(2) { animation-delay: .2s; }
+    .step:nth-child(3) { animation-delay: .3s; }
+    .step:nth-child(4) { animation-delay: .4s; }
+    .step-left { display: flex; flex-direction: column; align-items: center; }
+    .step-num {
+      width: 52px; height: 52px; border-radius: 50%;
+      background: var(--blue); color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem; font-weight: 800;
+      flex-shrink: 0; box-shadow: 0 4px 20px rgba(37,99,235,.35);
+    }
+    .step-line {
+      width: 2px; flex: 1; min-height: 40px;
+      background: linear-gradient(to bottom, var(--blue), transparent);
+      margin: 8px 0;
+    }
+    .step:last-child .step-line { display: none; }
+    .step-content { padding-bottom: 36px; }
+    .step-title { font-weight: 700; font-size: 1.05rem; color: var(--text); margin-bottom: 6px; }
+    .step-desc { color: var(--text2); font-size: .9rem; line-height: 1.65; }
+
+    /* ─── DEPOIMENTOS ─── */
+    #depoimentos { background: #fff; }
+    .dep-grid {
+      max-width: 1100px; margin: 50px auto 0;
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px;
+    }
+    .dep-card {
+      background: var(--gray); border: 1px solid var(--gray2);
+      border-radius: var(--radius); padding: 32px 28px;
+      position: relative;
+    }
+    .dep-quote {
+      font-size: 3.5rem; color: var(--blue); opacity: .2;
+      font-family: Georgia, serif; line-height: 1;
+      position: absolute; top: 18px; left: 24px;
+    }
+    .dep-text {
+      color: var(--text2); font-size: .93rem; line-height: 1.72;
+      margin-bottom: 24px; padding-top: 20px; font-style: italic;
+    }
+    .dep-author { display: flex; align-items: center; gap: 14px; }
+    .dep-avatar {
+      width: 46px; height: 46px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--blue), #1e40af);
+      display: flex; align-items: center; justify-content: center;
+      color: #fff; font-weight: 700; font-size: 1.1rem;
+      font-family: 'Playfair Display', serif;
+      flex-shrink: 0;
+    }
+    .dep-name { font-weight: 700; font-size: .93rem; color: var(--text); }
+    .dep-role { font-size: .78rem; color: var(--gray3); margin-top: 2px; }
+    .dep-stars { color: #f59e0b; font-size: .82rem; margin-bottom: 4px; letter-spacing: 2px; }
+
+    /* ─── CTA ─── */
+    #cta {
+      background: linear-gradient(135deg, var(--blue) 0%, #1e40af 100%);
+      text-align: center; position: relative; overflow: hidden;
+    }
+    #cta::before {
+      content: ''; position: absolute; inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='30' cy='30' r='1' fill='rgba(255,255,255,.08)'/%3E%3C/svg%3E") repeat;
+    }
+    #cta .section-title { color: #fff; }
+    .cta-sub { color: rgba(255,255,255,.8); font-size: 1.05rem; line-height: 1.7; max-width: 560px; margin: 0 auto 36px; }
+    .btn-white {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: #fff; color: var(--blue);
+      padding: 16px 36px; border-radius: 10px;
+      font-size: 1.05rem; font-weight: 700; text-decoration: none;
+      transition: all .2s; box-shadow: 0 4px 20px rgba(0,0,0,.2);
+      position: relative;
+    }
+    .btn-white:hover { transform: translateY(-3px); box-shadow: 0 8px 32px rgba(0,0,0,.25); }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--navy); color: rgba(255,255,255,.55);
+      padding: 48px clamp(20px,5vw,80px);
+      text-align: center;
+    }
+    .footer-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem; color: #fff; font-weight: 800; margin-bottom: 6px;
+    }
+    .footer-crc { font-size: .78rem; letter-spacing: .08em; color: rgba(255,255,255,.35); margin-bottom: 20px; }
+    .footer-links { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; margin-bottom: 20px; }
+    .footer-links a { color: rgba(255,255,255,.55); text-decoration: none; font-size: .88rem; transition: color .2s; }
+    .footer-links a:hover { color: #fff; }
+    .footer-divider { height: 1px; background: rgba(255,255,255,.08); max-width: 500px; margin: 0 auto 20px; }
+    .footer-copy { font-size: .8rem; color: rgba(255,255,255,.28); }
+
+    /* ─── WHATSAPP FLOAT ─── */
+    .wa-float {
+      position: fixed; bottom: 28px; right: 28px; z-index: 1000;
+      width: 60px; height: 60px; border-radius: 50%;
+      background: #25D366; display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 24px rgba(37,211,102,.45);
+      text-decoration: none; transition: all .25s;
+      animation: bouncein .8s ease .5s both;
+    }
+    .wa-float:hover { transform: scale(1.1) translateY(-3px); box-shadow: 0 8px 32px rgba(37,211,102,.55); }
+    .wa-float svg { width: 32px; height: 32px; }
+    .wa-tooltip {
+      position: absolute; right: 70px; white-space: nowrap;
+      background: var(--navy); color: #fff;
+      font-size: .8rem; font-weight: 600; padding: 7px 14px;
+      border-radius: 8px; pointer-events: none;
+      opacity: 0; transform: translateX(6px);
+      transition: all .25s; letter-spacing: .02em;
+    }
+    .wa-float:hover .wa-tooltip { opacity: 1; transform: translateX(0); }
+
+    /* ─── ANIMATIONS ─── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes pulse {
+      0%,100% { opacity: 1; transform: scale(1); }
+      50%      { opacity: .5; transform: scale(.8); }
+    }
+    @keyframes bouncein {
+      0%   { opacity: 0; transform: scale(.5); }
+      70%  { transform: scale(1.08); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    .reveal {
+      opacity: 0; transform: translateY(30px);
+      transition: opacity .65s ease, transform .65s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .sobre-inner { grid-template-columns: 1fr; gap: 40px; }
+      .sobre-visual { order: -1; }
+      .sobre-badge { right: 0; }
+    }
+    @media (max-width: 600px) {
+      .hero-btns { flex-direction: column; }
+      .btn-primary, .btn-outline { justify-content: center; }
+      .hero-stats { gap: 20px; }
+      .dep-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <a href="#hero" class="nav-brand">
+    <div class="nav-logo-icon">A</div>
+    <div>
+      <div class="nav-brand-text">Araujo Contabilidade</div>
+      <span class="nav-brand-crc">CRC MG-135873/O</span>
+    </div>
+  </a>
+  <div class="nav-links">
+    <a href="#sobre">Sobre</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#diferenciais">Diferenciais</a>
+    <a href="#como-funciona">Como Funciona</a>
+    <a href="#depoimentos">Depoimentos</a>
+    <a href="https://wa.me/5534996636537" target="_blank" rel="noopener" class="nav-cta">📲 WhatsApp</a>
+  </div>
+  <div class="hamburger" id="hamburger" aria-label="Menu" role="button" tabindex="0">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#sobre" class="mm-link">Sobre</a>
+  <a href="#servicos" class="mm-link">Serviços</a>
+  <a href="#diferenciais" class="mm-link">Diferenciais</a>
+  <a href="#como-funciona" class="mm-link">Como Funciona</a>
+  <a href="#depoimentos" class="mm-link">Depoimentos</a>
+  <a href="https://wa.me/5534996636537" target="_blank" rel="noopener" class="nav-cta">📲 Falar no WhatsApp</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg">
+    <div class="hero-grid-lines"></div>
+    <div class="hero-bg-circle c1"></div>
+    <div class="hero-bg-circle c2"></div>
+  </div>
+  <div class="hero-inner">
+    <div class="hero-badge">
+      <span class="hero-badge-dot"></span>
+      Especialistas em MEI &amp; Simples Nacional
+    </div>
+    <h1 class="hero-title">
+      Contabilidade <span>Inteligente</span> para MEIs e Empresas do Simples Nacional
+    </h1>
+    <p class="hero-sub">
+      Reduza preocupações com burocracia e tenha uma contabilidade eficiente, acessível e focada no crescimento do seu negócio.
+    </p>
+    <div class="hero-btns">
+      <a href="https://wa.me/5534996636537" target="_blank" rel="noopener" class="btn-primary">
+        💬 Solicitar Orçamento
+      </a>
+      <a href="https://wa.me/5534996636537" target="_blank" rel="noopener" class="btn-outline">
+        📲 Falar no WhatsApp
+      </a>
+    </div>
+    <div class="hero-stats">
+      
+      <div>
+        <div class="hero-stat-num">100<span>%</span></div>
+        <div class="hero-stat-label">Atendimento Digital</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">100<span>%</span></div>
+        <div class="hero-stat-label">Atendimento em todo o pais</div>
+      </div>
+
+
+      
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section id="sobre">
+  <div class="sobre-inner">
+    <div class="sobre-visual reveal">
+      <div class="sobre-card">
+        <div class="sobre-card-icon">🏛️</div>
+        <div class="sobre-card-title">Araujo Contabilidade</div>
+        <p class="sobre-card-text">Nascemos para simplificar a gestão do seu negócio, com foco em MEIs e empresas do Simples Nacional — combinando expertise técnica e atendimento humanizado.</p>
+      </div>
+      <div class="sobre-badge">
+        <span>CRC</span>
+        MG-135873/O
+      </div>
+    </div>
+    <div class="sobre-content reveal">
+      <span class="section-eyebrow">Quem Somos</span>
+      <h2 class="section-title">Contabilidade com propósito e responsabilidade</h2>
+      <p class="section-sub">A Araujo Contabilidade nasceu com o propósito de oferecer soluções contábeis acessíveis, eficientes e seguras para MEIs e empresas optantes pelo Simples Nacional. Nosso compromisso é simplificar a gestão do seu negócio, garantindo conformidade fiscal e apoio estratégico para o crescimento da sua empresa.</p>
+      <ul class="sobre-list">
+        <li>Especialidade em MEI e Simples Nacional</li>
+        <li>Atendimento digital e presencial</li>
+        <li>Suporte contínuo e orientação personalizada</li>
+        <li>Conformidade fiscal e segurança jurídica garantidas</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- SERVIÇOS -->
+<section id="servicos">
+  <div style="max-width:1100px;margin:0 auto;" class="reveal">
+    <div class="center">
+      <span class="section-eyebrow">O Que Oferecemos</span>
+      <h2 class="section-title">Soluções Contábeis Completas</h2>
+      <p class="section-sub">Do planejamento à execução, cuidamos de toda a parte contábil e fiscal para que você foque no que realmente importa: o seu negócio.</p>
+    </div>
+  </div>
+  <div class="servicos-grid">
+    <div class="servico-card reveal">
+      <div class="servico-icon">🏢</div>
+      <div class="servico-name">Abertura de Empresas</div>
+      <div class="servico-desc">Registramos sua empresa com agilidade, do CNPJ à inscrição estadual/municipal.</div>
+    </div>
+    <div class="servico-card reveal">
+      <div class="servico-icon">📋</div>
+      <div class="servico-name">Regularização de MEI</div>
+      <div class="servico-desc">Resolvemos pendências e mantemos seu MEI em dia com a Receita Federal.</div>
+    </div>
+    <div class="servico-card reveal">
+      <div class="servico-icon">📅</div>
+      <div class="servico-name">Declaração Anual do MEI</div>
+      <div class="servico-desc">DASN-SIMEI entregue corretamente e no prazo, evitando multas.</div>
+    </div>
+    <div class="servico-card reveal">
+      <div class="servico-icon">🧾</div>
+      <div class="servico-name">Emissão de Notas Fiscais</div>
+      <div class="servico-desc">Gerenciamento completo da emissão de NF-e e NFS-e para sua empresa.</div>
+    </div>
+    <div class="servico-card reveal">
+      <div class="servico-icon">📊</div>
+      <div class="servico-name">Planejamento Tributário</div>
+      <div class="servico-desc">Redução legal da carga tributária com estratégias personalizadas.</div>
+    </div>
+    <div class="servico-card reveal">
+      <div class="servico-icon">💼</div>
+      <div class="servico-name">Folha de Pagamento</div>
+      <div class="servico-desc">Processamento de holerites, encargos e FGTS de forma precisa e pontual.</div>
+    </div>
+    <div class="servico-card reveal">
+      <div class="servico-icon">👥</div>
+      <div class="servico-name">Departamento Pessoal</div>
+      <div class="servico-desc">Admissões, demissões, férias e obrigações trabalhistas gerenciadas.</div>
+    </div>
+    <div class="servico-card reveal">
+      <div class="servico-icon">🗂️</div>
+      <div class="servico-name">Imposto de Renda</div>
+      <div class="servico-desc">Declaração de IRPF e IRPJ com máxima restituição e segurança.</div>
+    </div>
+    <div class="servico-card reveal">
+      <div class="servico-icon">💡</div>
+      <div class="servico-name">Consultoria Contábil</div>
+      <div class="servico-desc">Orientação estratégica para decisões financeiras mais acertadas.</div>
+    </div>
+    <div class="servico-card reveal">
+      <div class="servico-icon">🔄</div>
+      <div class="servico-name">Alteração e Baixa de Empresas</div>
+      <div class="servico-desc">Alterações contratuais e encerramento de empresas com todo o suporte necessário.</div>
+    </div>
+  </div>
+</section>
+
+<!-- DIFERENCIAIS -->
+<section id="diferenciais">
+  <div style="max-width:1100px;margin:0 auto;" class="reveal">
+    <div class="center">
+      <span class="section-eyebrow" style="color:#60a5fa;">Nossos Diferenciais</span>
+      <h2 class="section-title">Por que escolher a Araujo Contabilidade?</h2>
+      <p class="section-sub">Mais do que um serviço contábil, somos um parceiro estratégico comprometido com o crescimento sustentável do seu negócio.</p>
+    </div>
+  </div>
+  <div class="dif-grid">
+    <div class="dif-card reveal">
+      <div class="dif-icon">🤝</div>
+      <div class="dif-title">Atendimento Humanizado</div>
+      <div class="dif-text">Cada cliente recebe atenção individualizada. Você não é um número — é um parceiro de negócios que merece o nosso melhor.</div>
+    </div>
+    <div class="dif-card reveal">
+      <div class="dif-icon">💰</div>
+      <div class="dif-title">Valores Acessíveis</div>
+      <div class="dif-text">Contabilidade de qualidade não precisa custar caro. Oferecemos planos justos e transparentes para MEIs e pequenas empresas.</div>
+    </div>
+    <div class="dif-card reveal">
+      <div class="dif-icon">⚡</div>
+      <div class="dif-title">Agilidade nos Processos</div>
+      <div class="dif-text">Documentos e obrigações resolvidos com rapidez, sem burocracia desnecessária e sempre dentro dos prazos legais.</div>
+    </div>
+    <div class="dif-card reveal">
+      <div class="dif-icon">🎓</div>
+      <div class="dif-title">Suporte Especializado</div>
+      <div class="dif-text">Equipe com expertise em MEI e Simples Nacional, atualizada com as últimas mudanças tributárias e legislativas.</div>
+    </div>
+    <div class="dif-card reveal">
+      <div class="dif-icon">💻</div>
+      <div class="dif-title">Atendimento Digital</div>
+      <div class="dif-text">Resolva tudo pelo WhatsApp ou videochamada. Oferecemos também atendimento presencial conforme sua necessidade.</div>
+    </div>
+    <div class="dif-card reveal">
+      <div class="dif-icon">🔍</div>
+      <div class="dif-title">Transparência Total</div>
+      <div class="dif-text">Sem letras miúdas ou cobranças surpresas. Você sabe exatamente o que está contratando e o que está pagando.</div>
+    </div>
+  </div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section id="como-funciona">
+  <div style="max-width:1100px;margin:0 auto;">
+    <div class="center reveal">
+      <span class="section-eyebrow">Passo a Passo</span>
+      <h2 class="section-title">Como Funciona</h2>
+      <p class="section-sub">Começar é simples. Em poucos passos você terá uma contabilidade de qualidade cuidando do seu negócio.</p>
+    </div>
+    <div class="steps-wrapper" style="max-width:680px;margin:52px auto 0;">
+      <div class="step reveal">
+        <div class="step-left">
+          <div class="step-num">1</div>
+          <div class="step-line"></div>
+        </div>
+        <div class="step-content">
+          <div class="step-title">Entre em contato pelo WhatsApp</div>
+          <div class="step-desc">Envie uma mensagem rápida pelo WhatsApp. Sem formulários complexos, sem burocracia — só uma conversa simples e direta.</div>
+        </div>
+      </div>
+      <div class="step reveal">
+        <div class="step-left">
+          <div class="step-num">2</div>
+          <div class="step-line"></div>
+        </div>
+        <div class="step-content">
+          <div class="step-title">Analisamos sua necessidade</div>
+          <div class="step-desc">Nosso especialista ouve sua situação, entende o perfil do seu negócio e identifica quais serviços fazem mais sentido para você.</div>
+        </div>
+      </div>
+      <div class="step reveal">
+        <div class="step-left">
+          <div class="step-num">3</div>
+          <div class="step-line"></div>
+        </div>
+        <div class="step-content">
+          <div class="step-title">Apresentamos a melhor solução</div>
+          <div class="step-desc">Receba uma proposta personalizada e transparente, com os serviços ideais para o momento atual da sua empresa.</div>
+        </div>
+      </div>
+      <div class="step reveal">
+        <div class="step-left">
+          <div class="step-num">4</div>
+          <div class="step-line"></div>
+        </div>
+        <div class="step-content">
+          <div class="step-title">Você recebe acompanhamento contínuo</div>
+          <div class="step-desc">A partir daí, cuidamos de tudo para você — com relatórios, alertas de prazos e suporte sempre que precisar.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta">
+  <div style="position:relative;z-index:1;max-width:680px;margin:0 auto;text-align:center;" class="reveal">
+    <span class="section-eyebrow" style="color:rgba(255,255,255,.7);">Vamos Conversar</span>
+    <h2 class="section-title">Pronto para ter uma contabilidade sem complicação?</h2>
+    <p class="cta-sub">Fale agora com a Araujo Contabilidade e descubra como podemos ajudar sua empresa a crescer com segurança.</p>
+    <a href="https://wa.me/5534996636537" target="_blank" rel="noopener" class="btn-white">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Conversar no WhatsApp
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Araujo Contabilidade</div>
+  <div class="footer-crc">CRC MG-135873/O · Murilo Gonçalves de Araújo</div>
+  <div class="footer-links">
+    <a href="#sobre">Sobre</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#diferenciais">Diferenciais</a>
+    <a href="https://wa.me/5534996636537" target="_blank" rel="noopener">WhatsApp: (34) 99663-6537</a>
+  </div>
+  <div class="footer-divider"></div>
+  <div class="footer-copy">© 2025 Araujo Contabilidade. Todos os direitos reservados.</div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/5534996636537" target="_blank" rel="noopener" class="wa-float" aria-label="Falar no WhatsApp">
+  <span class="wa-tooltip">Falar no WhatsApp</span>
+  <svg viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script>
+  // Mobile menu
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+  document.querySelectorAll('.mm-link, .mobile-menu .nav-cta').forEach(el => {
+    el.addEventListener('click', () => mobileMenu.classList.remove('open'));
+  });
+
+  // Scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Stagger children of grids
+  document.querySelectorAll('.servicos-grid .reveal, .dif-grid .reveal, .dep-grid .reveal').forEach((el, i) => {
+    el.style.transitionDelay = (i % 4) * 80 + 'ms';
+  });
+</script>
+</body>
+</html>
